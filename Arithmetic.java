@@ -15,6 +15,11 @@ public class Arithmetic {
 
         int average = (num1 + num2 + num3) / 3;
 
+        if (average == 0) {
+            System.out.println("The average of the numbers is zero, which would cause a division by zero.");
+            System.exit(1);
+        }
+
         int absSum = 0;
 
         if (num1 < 0) {

@@ -11,7 +11,10 @@ public class SidesTriangle {
         System.out.print("Enter third side: ");
         int c = scanner.nextInt();
 
-
+        if (a <= 0 || b <= 0 || c <= 0) {
+            System.out.println("All sides must be positive integers.");
+            System.exit(1);
+        }
         if ((a + b > c) && (a + c > b) && (b + c > a)) {
             System.out.println("A triangle can be with sides " + a + ", " + b + ", and " + c + ".");
         } else {
