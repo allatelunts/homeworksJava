@@ -32,9 +32,7 @@ public class FixedSizeIntegerArray {
         int middleIndex = n / 2;
         if (n > 1) {
             array[middleIndex - 1] = smaller;
-            if (middleIndex < n) {
-                array[middleIndex] = larger;
-            }
+            array[middleIndex] = larger;
         }
 
         System.out.println("Array:");
@@ -48,9 +46,7 @@ public class FixedSizeIntegerArray {
         if (n > 6) System.out.println(array[6]);
         if (n > 7) System.out.println(array[7]);
 
-        // Or
-        // for (int i = 0; i < n; i++) {
-        //            System.out.println(array[i]);
+
         }
 
 

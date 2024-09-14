@@ -6,31 +6,40 @@ public class EnterIntegerN {
 
         System.out.print("Enter an integer (n): ");
         int n = scanner.nextInt();
-        int arraySize = 0;
+        int arraySize;
 
-        if (n == 3 || n == 4 || n == 5) {
-            arraySize = n;
-        } else if (n == 6 || n == 7) {
-            arraySize = 10;
-        } else if (n > 0) {
-            arraySize = 15;
-            System.out.println("First element is 15");
+        switch (n) {
+            case 3:
+            case 4:
+            case 5:
+                arraySize = n;
+                break;
+            case 6:
+            case 7:
+                arraySize = 10;
+                break;
+            default:
+                arraySize = (n > 0) ? 15 : 0;
+                if (arraySize == 15) {
+                    System.out.println("First element is 15");
+                }
+                break;
         }
 
-        if (arraySize > 0) {
-            int[] array = new int[arraySize];
-            if (arraySize == 15) {
-                array[0] = 15;
-            }
-            System.out.println("Array size: " + array.length);
-        } else {
+        int[] array = (arraySize > 0) ? new int[arraySize] : null;
+
+        if (array == null) {
             System.out.println("Invalid input. Exiting.");
             System.exit(1);
         }
 
+        if (arraySize == 15) {
+            array[0] = 15;
+        }
+        System.out.println("Array size: " + array.length);
+
         scanner.close();
     }
 }
-
 
 
