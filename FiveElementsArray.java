@@ -1,7 +1,6 @@
 public class FiveElementsArray {
     public static void main(String[] args) {
         double[] originalArray = {2.4, 5.5, 0.0, -4.3, 0.0};
-        //double[] nonNegativeArray = new double[5];
         double[] reversedArray = new double[5];
 
         int count = 0;
