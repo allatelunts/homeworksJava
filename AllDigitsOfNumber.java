@@ -10,19 +10,25 @@ public class AllDigitsOfNumber {
             System.exit(1);
         }
 
+        int digitCount = 0;
         int tempNumber = number;
-        int divisor = 1;
 
-        while (tempNumber / divisor >= 10) {
-            divisor *= 10;
+
+        while (tempNumber > 0) {
+            tempNumber /= 10;
+            digitCount++;
+        }
+
+        int divisor = 1;
+        for (int i = 1; i < digitCount; i++) {
+            divisor = divisor * 10;
         }
 
         while (divisor > 0) {
             int digit = number / divisor;
             System.out.println(digit);
-            number %= divisor;
-            divisor /= 10;
+            number = number % divisor;
+            divisor = divisor / 10;
         }
     }
 }
-
