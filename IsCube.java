@@ -27,7 +27,7 @@ public class IsCube {
         }
 
         if (!isCube) {
-            System.out.println(num +" "+ isCube);
+            System.out.println(num +  " is not the cube of any integer.");
         }
     }
 }
